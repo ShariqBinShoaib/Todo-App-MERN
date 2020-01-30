@@ -1,0 +1,26 @@
+form {
+    display: flex;
+}
+
+input[type='text'] {
+    flex: 50;
+    font: 100px;
+    height: 40px;
+    padding: 5px;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-radius: 0 0 5px 5px ;
+    border-bottom: 2px solid #999;
+}
+
+input[type='text']:focus {
+    border-bottom: 3px solid #555;
+}
+
+input[type='submit'] {
+    flex: 1;
+    height: 39px;
+    border-radius: 0 0 5px 5px;
+}
