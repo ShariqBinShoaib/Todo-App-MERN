@@ -18,7 +18,7 @@ class TodoItem extends Component {
     const { _id, taskTitle } = this.props.todo;
     return (
       <div className='containar'>
-        <Checkbox markComplete={this.props.markComplete} id={_id} />
+        <Checkbox checked={this.props.markComplete} id={_id} />
         <div style={this.paraStyle()}>
           <p>
             {taskTitle}
