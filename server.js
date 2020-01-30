@@ -13,7 +13,10 @@ app.use(bodyParser.json());
 mongoose.set('useFindAndModify', false);
 
 // Connect Mongo DB
-mongoose.connect('mongodb+srv://sbsansari:sbsansari@samplecluster-xinpi.gcp.mongodb.net/todoApp?retryWrites=true&w=majority', { useNewUrlParser: true })
+
+const { mongoURI } = require('./config/keys');
+
+mongoose.connect(mongoURI, { useNewUrlParser: true })
     .then(() => console.log('Connected to MongoDB.'))
     .catch(err => console.error('Could not connect to MongoDB', err));
 

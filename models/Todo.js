@@ -4,8 +4,7 @@ const Schema = mongoose.Schema;
 const createTodo = new Schema({
     taskTitle: {
         type: String,
-        required: true,
-        minlength: 3
+        required: true
     },
     taskStatus: Boolean
 });

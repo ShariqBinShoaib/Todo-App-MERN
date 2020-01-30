@@ -9,7 +9,6 @@ class AddTodo extends Component {
   onSubmit = event => {
     event.preventDefault();
     this.props.addTodo(this.state.title);
-    console.log('Add Todo Props:  ',this.props);
     this.setState({ title: '' });
   }
 

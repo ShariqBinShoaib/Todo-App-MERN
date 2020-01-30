@@ -9,7 +9,6 @@ router.get('/', async (req, res) => {
     try {
         const todos = await Todo.find().select({ taskTitle: 1, taskStatus: 1 });
         if (!todos) return res.status(404).send('No Todo Found!');
-        console.log(todos);
         res.send(todos);
     } catch (error) {
         console.log(error);
@@ -42,7 +41,6 @@ router.put('/:id', async (req, res) => {
 
         todo.taskStatus = req.body.taskStatus;
         const result = await todo.save();
-        console.log(result);
         res.send(result)
     } catch (error) {
         console.log(error);
@@ -64,7 +62,7 @@ router.delete('/:id', async (req, res) => {
 
 function validateTodos(todo) {
     const schema = {
-        taskTitle: Joi.string().min(3).required(),
+        taskTitle: Joi.string().required(),
         taskStatus: Joi.required()
     };
 

@@ -27,7 +27,7 @@ class App extends Component {
 
   markComplete = id => {
     const todos = [...this.state.todos];
-    const index = todos.indexOf(todos.filter(t => t._id === id)[0]);
+    const index = todos.indexOf(todos.filter(todo => todo._id === id)[0]);
     todos[index].taskStatus = !todos[index].taskStatus;
     this.setState({ todos });
     axios.put('/api/todo/' + id, {
@@ -38,7 +38,7 @@ class App extends Component {
 
   handleDeleteTodo = id => {
     const todos = [...this.state.todos];
-    const modifiedTodos = todos.filter(t => t._id !== id);
+    const modifiedTodos = todos.filter(todo => todo._id !== id);
     axios.delete(`/api/todo/${id}`)
       .catch(err => console.log(err))
     this.setState({ todos: modifiedTodos });
