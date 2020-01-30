@@ -16,10 +16,6 @@ mongoose.set('useFindAndModify', false);
 mongoose.connect('mongodb+srv://sbsansari:sbsansari@samplecluster-xinpi.gcp.mongodb.net/todoApp?retryWrites=true&w=majority', { useNewUrlParser: true })
     .then(() => console.log('Connected to MongoDB.'))
     .catch(err => console.error('Could not connect to MongoDB', err));
-// // Connect Mongo DB
-// mongoose.connect('mongodb://localhost/TodoApp', { useNewUrlParser: true })
-//     .then(() => console.log('Connected to MongoDB.'))
-//     .catch(err => console.error('Could not connect to MongoDB', err));
 
 //Test Routes
 app.get('/test', (req, res) => {

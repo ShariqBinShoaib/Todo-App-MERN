@@ -7,8 +7,8 @@ function Header() {
       <h1>Todo List</h1>
       <Link style={linkStyle} to="/">
         Home
-      </Link>{" "}
-      |{" "}
+      </Link>{"  "}
+      |{"  "}
       <Link style={linkStyle} to="/about">
         About
       </Link>
